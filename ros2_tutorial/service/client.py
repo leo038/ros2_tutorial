@@ -20,12 +20,16 @@ class Client(Node):
 
 def main(args=None):
     rclpy.init(args=args)
+
     client = Client()
     future = client.send_request()
     rclpy.spin_until_future_complete(client, future)
     # rclpy.spin(client)
     response = future.result()
     print(f"requset: a= {client.req.a}, b= {client.req.b}, response: sum={response.sum}")
+
+    client.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

@@ -19,11 +19,15 @@ class PublishNode(Node):
 
 
 def main(args=None):
-    rclpy.init(args=args)
+    rclpy.init(args=args)  ## 初始化
+
+    ###########################################
     publish_node = PublishNode()
-    rclpy.spin(publish_node)
-    publish_node.destroy_node()
-    rclpy.shutdown()
+    rclpy.spin(publish_node)    ## 运行节点， 只有这一部分需要改变，其他的都是固定的
+    ##########################################
+
+    publish_node.destroy_node()   ##销毁节点
+    rclpy.shutdown()  ##关闭节点
 
 
 if __name__ == '__main__':

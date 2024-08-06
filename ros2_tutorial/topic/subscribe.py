@@ -16,8 +16,11 @@ class SubscribeNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
+
     subs_node = SubscribeNode()
     rclpy.spin(subs_node)
+
+
     subs_node.destroy_node()
     rclpy.shutdown()
 

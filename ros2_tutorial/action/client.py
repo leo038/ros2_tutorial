@@ -51,8 +51,8 @@ class MinimalActionClient(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    action_client = MinimalActionClient()
 
+    action_client = MinimalActionClient()
     action_client.send_goal()
     rclpy.spin(action_client)
 
