@@ -1,0 +1,7 @@
+# 请求数据
+int32 a
+int32 b
+int32 c
+---
+# 应答数据
+int64 sum

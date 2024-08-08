@@ -24,6 +24,8 @@ setup(
             "sub=ros2_tutorial.topic.subscribe:main",
             "server=ros2_tutorial.service.server:main",
             "client=ros2_tutorial.service.client:main",
+            "custom_interface_server=ros2_tutorial.service.custom_interface_server:main",
+            "custom_interface_client=ros2_tutorial.service.custom_interface_client:main",
             "action_server=ros2_tutorial.action.server:main",
             "action_client=ros2_tutorial.action.client:main",
         ],
